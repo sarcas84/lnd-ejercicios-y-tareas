@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8">
+    <libro>
+        <titulo>XML para principiantes</titulo>
+        <autor>Juan Perez</autor>
+        <año>2022</año>
+        <precio moneda="USD">25.00</precio>
+    </libro>
