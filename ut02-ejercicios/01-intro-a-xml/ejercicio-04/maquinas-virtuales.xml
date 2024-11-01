@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<maquinas_virtuales>
+    <maquina_virtual id="1">
+        <nombre></nombre>
+        <cpu></cpu>
+        <ram unidad="MB"></ram>
+        <disco tipo="vdi">/ruta/a/disco1.vdi</disco>
+        <tamano_disco unidad="GB"></tamano_disco>
+        <adaptador_red modo="NAT">
+            <reglas_reenvio_puertos>
+                <regla>
+                    <puerto_origen></puerto_origen>
+                    <puerto_destino></puerto_destino>
+                </regla>
+                <regla>
+                    <puerto_origen></puerto_origen>
+                    <puerto_destino></puerto_destino>
+                </regla>
+            </reglas_reenvio_puertos>
+        </adaptador_red>
+    
