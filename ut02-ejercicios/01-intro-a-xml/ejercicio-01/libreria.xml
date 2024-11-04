@@ -3,5 +3,5 @@
         <titulo>XML para principiantes</titulo>
         <autor>Juan Perez</autor>
         <año>2022</año>
-        <precio moneda="USD">25.00</precio>
+        <precio moneda ="USD">25.00</precio>
     </libro>
