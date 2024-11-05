@@ -1,0 +1,22 @@
+<!ELEMENT personas (persona+)>
+<!-- 'personas' debe contener uno o más elementos 'persona'. El símbolo '+' indica que debe haber al menos una persona, pero puede haber más. -->
+<!ELEMENT persona (nombre, apellidos, telefono, email, direccion)>
+<!-- Cada 'persona' debe contener los elementos 'nombre', 'apellidos', 'telefono', 'email' y 'direccion' en ese orden. -->
+<!ELEMENT nombre (#PCDATA)>
+<!-- 'nombre' es un elemento de texto que contiene el nombre de la persona. -->
+<!ELEMENT apellidos (#PCDATA)>
+<!-- 'apellidos' es un elemento de texto que contiene los apellidos de la persona. -->
+<!ELEMENT telefono (#PCDATA)>
+<!-- 'telefono' es un elemento de texto que contiene el número de teléfono de la persona. -->
+<!ELEMENT email (#PCDATA)>
+<!-- 'email' es un elemento de texto que contiene la dirección de correo electrónico de la persona. -->
+<!ELEMENT direccion (tipo_via, nombre_via, numero)>
+<!-- 'direccion' debe contener los elementos 'tipo_via', 'nombre_via' y 'numero' en ese orden. -->
+<!ELEMENT tipo_via (#PCDATA)>
+<!-- 'tipo_via' es un elemento de texto que describe el tipo de vía (por ejemplo, 'Calle', 'Avenida', etc.). -->
+<!ELEMENT nombre_via (#PCDATA)>
+<!-- 'nombre_via' es un elemento de texto que contiene el nombre de la vía (por ejemplo, 'Gran Vía', 'Constitución', etc.). -->
+<!ELEMENT numero (#PCDATA)>
+<!-- 'numero' es un elemento de texto que contiene el número de la dirección (por ejemplo, '100', '50', etc.). -->
+<!ATTLIST persona id CDATA #REQUIRED>
+<!-- El atributo 'id' de 'persona' es obligatorio (#REQUIRED) porque cada persona debe tener un identificador único. -->
