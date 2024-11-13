@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Definición del elemento raíz `personas` con un límite de 1 a 5 elementos `persona` -->
+    <xs:element name="personas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="persona" maxOccurs="5" minOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Nombre con longitud máxima de 30 caracteres -->
+                            <xs:element name="nombre">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="30"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            
+                            <!-- Apellidos con longitud máxima de 50 caracteres -->
+                            <xs:element name="apellidos">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="50"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            
+                            <!-- DNI con exactamente 9 caracteres -->
+                            <xs:element name="DNI">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:length value="9"/>
+                                        <xs:pattern value="\d{8}[A-Z]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            
+                            <!-- Fecha de Nacimiento con el formato YYYY-MM-DD y rango de fechas -->
+                            <xs:element name="fecha_nacimiento">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:date">
+                                        <xs:minInclusive value="1900-01-01"/>
+                                        <xs:maxInclusive value="2010-01-01"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            
+                            <!-- Teléfono con exactamente 9 caracteres -->
+                            <xs:element name="telefono">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:length value="9"/>
+                                        <xs:pattern value="\d{9}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

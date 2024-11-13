@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filmoteca SYSTEM "filmoteca.dtd">
+
 <filmoteca>
     <pelicula calificacion="PG">
         <titulo>El Viaje Fantástico</titulo>

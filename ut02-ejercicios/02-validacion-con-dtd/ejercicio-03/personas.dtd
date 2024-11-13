@@ -1,0 +1,18 @@
+<!ELEMENT personas (persona+)>
+<!-- Uso de `+` ya que que el elemento `<persona>` debe aparecer al menos una vez o más en `<personas>` -->
+
+<!ELEMENT persona (nombre, apellidos, telefono, email, direccion)>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT direccion (tipo, nombre_via, numero)>
+
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT nombre_via (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+
+<!ATTLIST persona
+    id ID #REQUIRED>
+<!-- El atributo `id` es #REQUIRED ya que cada persona necesita un identificador único -->
