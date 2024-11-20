@@ -1,17 +1,11 @@
 <!ELEMENT filmoteca (pelicula+)>
 <!-- 'filmoteca' debe contener uno o más elementos 'pelicula'. El símbolo '+' indica que debe haber al menos una película, pero puede haber varias. -->
 <!ELEMENT pelicula (titulo, director, año_lanzamiento, duracion, genero)>
-<!-- Cada 'pelicula' debe contener 'titulo', 'director', 'año_lanzamiento', 'duracion' y 'genero', en ese orden. -->
 <!ELEMENT titulo (#PCDATA)>
-<!-- 'titulo' es un elemento de texto que contiene el título de la película. -->
 <!ELEMENT director (#PCDATA)>
-<!-- 'director' es un elemento de texto que contiene el nombre del director de la película. -->
 <!ELEMENT año_lanzamiento (#PCDATA)>
-<!-- 'año_lanzamiento' es un elemento de texto que contiene el año de lanzamiento de la película. -->
 <!ELEMENT duracion (#PCDATA)>
-<!-- 'duracion' es un elemento de texto que contiene la duración de la película. -->
 <!ELEMENT genero (#PCDATA)>
-<!-- 'genero' es un elemento de texto que contiene el género de la película. -->
 <!ATTLIST pelicula calificacion (G|PG|PG-13|R) #REQUIRED>
 <!-- El atributo 'calificacion' de 'pelicula' puede ser uno de los siguientes valores: 'G', 'PG', 'PG-13' o 'R'. Es un atributo obligatorio (#REQUIRED) porque la clasificación de la película es esencial para su identificación. -->
 <!ATTLIST duracion unidad (minutos|horas) #REQUIRED>

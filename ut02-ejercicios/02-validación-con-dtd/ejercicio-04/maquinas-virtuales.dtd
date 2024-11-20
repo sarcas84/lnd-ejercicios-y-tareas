@@ -1,34 +1,22 @@
-<!ELEMENT maquinas_virtuales (maquina_virtual+)>
-<!-- 'maquinas_virtuales' debe contener uno o más elementos 'maquina_virtual'. El símbolo '+' indica que debe haber al menos una máquina virtual, pero pueden haber varias. -->
-<!ELEMENT maquina_virtual (nombre, cpu, ram, disco, tamano_disco, adaptador_red)>
-<!-- Cada 'maquina_virtual' debe contener los elementos 'nombre', 'cpu', 'ram', 'disco', 'tamano_disco' y 'adaptador_red', en ese orden. -->
-<!ELEMENT nombre (#PCDATA)>
-<!-- 'nombre' es un elemento de texto que contiene el nombre de la máquina virtual. -->
-<!ELEMENT cpu (#PCDATA)>
-<!-- 'cpu' es un elemento de texto que describe la cantidad o características de la CPU asignada a la máquina virtual. -->
-<!ELEMENT ram (#PCDATA)>
-<!-- 'ram' es un elemento de texto que contiene la cantidad de memoria RAM asignada a la máquina virtual. -->
-<!ELEMENT disco (#PCDATA)>
-<!-- 'disco' es un elemento de texto que contiene la ruta o nombre del archivo de disco virtual asociado a la máquina virtual. -->
-<!ELEMENT tamano_disco (#PCDATA)>
-<!-- 'tamano_disco' es un elemento de texto que contiene el tamaño del disco virtual asignado a la máquina virtual. -->
-<!ELEMENT adaptador_red (reglas_reenvio_puertos)>
-<!-- 'adaptador_red' debe contener el elemento 'reglas_reenvio_puertos', que define las reglas para reenvío de puertos. -->
-<!ELEMENT reglas_reenvio_puertos (regla+)>
-<!-- 'reglas_reenvio_puertos' debe contener uno o más elementos 'regla'. El símbolo '+' indica que debe haber al menos una regla, pero pueden haber más. -->
-<!ELEMENT regla (puerto_origen, puerto_destino)>
-<!-- Cada 'regla' debe contener los elementos 'puerto_origen' y 'puerto_destino', en ese orden. -->
-<!ELEMENT puerto_origen (#PCDATA)>
-<!-- 'puerto_origen' es un elemento de texto que contiene el número de puerto origen para el reenvío. -->
-<!ELEMENT puerto_destino (#PCDATA)>
-<!-- 'puerto_destino' es un elemento de texto que contiene el número de puerto destino para el reenvío. -->
-<!ATTLIST maquina_virtual id CDATA #REQUIRED>
-<!-- El atributo 'id' de 'maquina_virtual' es obligatorio (#REQUIRED) porque cada máquina virtual debe tener un identificador único. -->
-<!ATTLIST ram unidad (MB|GB) #IMPLIED>
-<!-- El atributo 'unidad' de 'ram' puede ser 'MB' o 'GB'. Es opcional (#IMPLIED) porque si no se especifica la unidad, se puede asumir un valor predeterminado. -->
-<!ATTLIST disco tipo (vdi|vmdk|raw) #IMPLIED>
-<!-- El atributo 'tipo' de 'disco' puede ser 'vdi', 'vmdk' o 'raw'. Es opcional (#IMPLIED) porque no siempre es necesario especificar el tipo de disco. -->
-<!ATTLIST tamano_disco unidad (GB|TB) #IMPLIED>
-<!-- El atributo 'unidad' de 'tamano_disco' puede ser 'GB' o 'TB'. Es opcional (#IMPLIED) porque si no se especifica la unidad, se puede asumir un valor predeterminado. -->
-<!ATTLIST adaptador_red modo (NAT|Bridged|HostOnly) #IMPLIED>
-<!-- El atributo 'modo' de 'adaptador_red' puede ser 'NAT', 'Bridged' o 'HostOnly'. Es opcional (#IMPLIED) porque no siempre es necesario especificar el modo de red. -->
+<!ELEMENT maquina-virtuales (maquina*)> <!-- Utilizamos "*" porque puede haber 0 o más máquinas virtuales -->
+<!ELEMENT maquina (nombre, cpu, ram, disco, tamaño_disco, adaptador_red)>
+<!ATTLIST maquina 
+    id ID #REQUIRED> <!-- El atributo "id" es obligatorio (#REQUIRED) porque identifica de forma única a cada máquina -->
+<!ELEMENT nombre (#PCDATA)> 
+<!ELEMENT cpu (#PCDATA)> 
+<!ELEMENT ram (#PCDATA)> 
+<!ATTLIST ram 
+    unidad CDATA #REQUIRED> <!-- La unidad (MB) es obligatoria porque da contexto al valor -->
+<!ELEMENT disco EMPTY> 
+<!ATTLIST disco 
+    ruta CDATA #REQUIRED <!-- La ruta es obligatoria porque indica dónde se encuentra el archivo del disco -->
+    tipo (vdi | vmdk) #REQUIRED> <!-- El tipo de disco es obligatorio y puede ser "vdi" o "vmdk" -->
+<!ELEMENT tamaño_disco (#PCDATA)> 
+<!ATTLIST tamaño_disco 
+    unidad CDATA #REQUIRED> <!-- La unidad (GB) es obligatoria porque da contexto al valor -->
+<!ELEMENT adaptador_red (regla_puerto*)> <!-- Utilizamos "*" porque una red puede tener 0 o más reglas de reenvío de puertos -->
+<!ATTLIST adaptador_red 
+    tipo (NAT | puente) #REQUIRED> <!-- El tipo de adaptador de red es obligatorio y puede ser NAT o puente -->
+<!ELEMENT regla_puerto (puerto_huesped, puerto_externo)> 
+<!ELEMENT puerto_huesped (#PCDATA)> 
+<!ELEMENT puerto_externo (#PCDATA)> 

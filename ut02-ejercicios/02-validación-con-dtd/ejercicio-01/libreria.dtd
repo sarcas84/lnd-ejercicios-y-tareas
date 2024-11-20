@@ -1,14 +1,9 @@
 <!ELEMENT libreria (libro+)>
 <!-- 'libreria' debe contener uno o más elementos 'libro'. El símbolo '+' indica que el elemento 'libro' puede aparecer una o más veces. -->
 <!ELEMENT libro (titulo, autor, año, precio)>
-<!-- 'libro' debe contener 'titulo', 'autor', 'año' y 'precio'. -->
 <!ELEMENT titulo (#PCDATA)>
-<!-- 'titulo' es un elemento de texto que contiene el título del libro. -->
 <!ELEMENT autor (#PCDATA)>
-<!-- 'autor' es un elemento de texto que contiene el nombre del autor del libro. -->
 <!ELEMENT año (#PCDATA)>
-<!-- 'año' es un elemento de texto que contiene el año de publicación del libro. -->
 <!ELEMENT precio (#PCDATA)>
-<!-- 'precio' es un elemento de texto que contiene el precio del libro. -->
 <!ATTLIST precio moneda (USD|EUR) #REQUIRED>
 <!-- El atributo 'moneda' de 'precio' puede ser 'USD' o 'EUR'. Para asegurarnos de que el atributo moneda siempre esté presente y tenga un valor válido (USD o EUR) usamos (#REQUIRED). -->

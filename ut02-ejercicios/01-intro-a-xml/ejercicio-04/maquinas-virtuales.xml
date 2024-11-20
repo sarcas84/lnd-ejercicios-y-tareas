@@ -1,12 +1,30 @@
-<?xml version="1.0" encoding="UTF_8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE maquina-virtuales SYSTEM "maquina-virtuales.dtd">
 <maquina-virtuales> 
 
-    <maquina id="1">
-        <nombre>Ubuntu_Server</nombre>
+    <maquina id="vm1">
+        <nombre>Ind_ubuntu_desktop22.04</nombre>
         <cpu>2</cpu>
         <ram unidad="MB">4096</ram>
-        <disco ruta="/home/user/VirtualBox VMs/Ubuntu_Server/Ubuntu_Server.vdi" tipo="vdi"/>
+        <disco ruta="Ind_ubuntu_desktop22-disk001.vdi" tipo="vdi"/>
+        <tamaño_disco unidad="GB">25</tamaño_disco>
+        <adaptador_red tipo="NAT"/>
+    </maquina>
+
+    <maquina id="vm2">
+        <nombre>linuxmint21.3</nombre>
+        <cpu>2</cpu>
+        <ram unidad="MB">4096</ram>
+        <disco ruta="linuxmint21-disk001.vdi" tipo="vdi"/>
+        <tamaño_disco unidad="GB">25</tamaño_disco>
+        <adaptador_red tipo="NAT"/>
+    </maquina>
+
+    <maquina id="vm3">
+        <nombre>Ind_ubuntu_server22.04</nombre>
+        <cpu>2</cpu>
+        <ram unidad="MB">4096</ram>
+        <disco ruta="Ind_ubuntu_server22.04.vdi" tipo="vdi"/>
         <tamaño_disco unidad="GB">25</tamaño_disco>
         <adaptador_red tipo="NAT">
             <regla_puerto>
@@ -16,30 +34,5 @@
         </adaptador_red>
     </maquina>
 
-    <maquina id="2">
-        <nombre>Ubuntu_desktop</nombre>
-        <cpu>2</cpu>
-        <ram unidad="MB">4096</ram>
-        <disco ruta="/home/user/VirtualBox VMs/ubuntu_desktop/ubuntud.vmdk" tipo="vmdk"/>
-        <tamaño_disco unidad="GB">25</tamaño_disco>
-        <adaptador_red tipo="puente"/>
-    </maquina>
-
-    <maquina id="3">
-        <nombre>linux_mint</nombre>
-        <cpu>2</cpu>
-        <ram unidad="MB">4096</ram>
-        <disco ruta="/home/user/VirtualBox VMs/linux_mint/mint.vdi" tipo="vdi"/>
-        <tamaño_disco unidad="GB">25</tamaño_disco>
-        <adaptador_red tipo="NAT">
-            <regla_puerto>
-                <puerto_huesped>80</puerto_huesped>
-                <puerto_externo>8080</puerto_externo>
-            </regla_puerto>
-            <regla_puerto>
-                <puerto_huesped>443</puerto_huesped>
-                <puerto_externo>8443</puerto_externo>
-            </regla_puerto>
-        </adaptador_red>
-    </maquina>
 </maquina-virtuales>
+

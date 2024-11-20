@@ -1,0 +1,41 @@
+<!ELEMENT factura (informacion, cliente, empresa, productos, totales, comentarios)> 
+<!ELEMENT informacion (fecha_factura, numero_factura, fecha_vencimiento)> 
+<!ELEMENT fecha_factura (#PCDATA)> 
+<!ELEMENT numero_factura (#PCDATA)> 
+<!ELEMENT fecha_vencimiento (#PCDATA)>
+<!ELEMENT cliente (nombre, direccion, NIF, CP, ciudad, email)> 
+<!ELEMENT nombre (#PCDATA)> 
+<!ELEMENT direccion (#PCDATA)> 
+<!ELEMENT NIF (#PCDATA)> 
+<!ELEMENT CP (#PCDATA)> 
+<!ELEMENT ciudad (#PCDATA)> 
+<!ELEMENT email (#PCDATA)> 
+<!ELEMENT empresa (nombre, direccion, CIF, CP, ciudad, email)> 
+<!ELEMENT productos (producto+)> <!-- Utilizamos "+" porque debe haber al menos un producto -->
+<!ELEMENT producto (descripcion, unidades, precio_unitario, precio)> 
+<!ELEMENT descripcion (#PCDATA)> 
+<!ELEMENT unidades (#PCDATA)> 
+<!ELEMENT precio_unitario (#PCDATA)> 
+<!ATTLIST precio_unitario 
+    moneda CDATA #REQUIRED> <!-- La moneda es obligatoria para dar contexto al precio unitario -->
+<!ELEMENT precio (#PCDATA)> 
+<!ATTLIST precio 
+    moneda CDATA #REQUIRED> <!-- La moneda es obligatoria para dar contexto al precio -->
+<!ELEMENT totales (base_imponible, IVA, IRPF, total)> 
+<!ELEMENT base_imponible (#PCDATA)> 
+<!ATTLIST base_imponible 
+    moneda CDATA #REQUIRED> <!-- La moneda es obligatoria para especificar la unidad económica -->
+<!ELEMENT IVA (#PCDATA)> 
+<!ATTLIST IVA 
+    porcentaje CDATA #REQUIRED 
+    moneda CDATA #REQUIRED> <!-- El porcentaje y la moneda son obligatorios para identificar el IVA -->
+<!ELEMENT IRPF (#PCDATA)> 
+<!ATTLIST IRPF 
+    porcentaje CDATA #REQUIRED 
+    moneda CDATA #REQUIRED> <!-- El porcentaje y la moneda son obligatorios para identificar el IRPF -->
+<!ELEMENT total (#PCDATA)> 
+<!ATTLIST total 
+    moneda CDATA #REQUIRED> <!-- La moneda es obligatoria para dar contexto al total -->
+<!ELEMENT comentarios (pago_por_transferencia)> 
+<!ELEMENT pago_por_transferencia (#PCDATA)> 
+
