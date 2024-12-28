@@ -1,0 +1,32 @@
+<inventory>
+  <product id="P001">
+    <name>Chair</name>
+    <category>Furniture</category>
+    <price currency="USD">49.99</price>
+    <stock>200</stock>
+  </product>
+  <product id="P002">
+    <name>Table</name>
+    <category>Furniture</category>
+    <price currency="USD">129.99</price>
+    <stock>50</stock>
+  </product>
+  <product id="P003">
+    <name>Lamp</name>
+    <category>Lighting</category>
+    <price currency="USD">19.99</price>
+    <stock>100</stock>
+  </product>
+  <product id="P004">
+    <name>Desk</name>
+    <category>Furniture</category>
+    <price currency="USD">249.99</price>
+    <stock>20</stock>
+  </product>
+  <product id="P005">
+    <name>Ceiling Light</name>
+    <category>Lighting</category>
+    <price currency="USD">79.99</price>
+    <stock>30</stock>
+  </product>
+</inventory>

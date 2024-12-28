@@ -1,0 +1,27 @@
+<electronics>
+  <item id="201">
+    <name>Smartphone</name>
+    <brand>BrandX</brand>
+    <price currency="USD">699.99</price>
+    <stock>50</stock>
+  </item>
+  <item id="202">
+    <name>Laptop</name>
+    <brand>BrandY</brand>
+    <price currency="USD">999.99</price>
+    <stock>10</stock>
+  </item>
+  <item id="203">
+    <name>Tablet</name>
+    <brand>BrandX</brand>
+    <price currency="USD">399.99</price>
+    <stock>25</stock>
+  </item>
+  <item id="204">
+    <name>Headphones</name>
+    <brand>BrandZ</brand>
+    <price currency="USD">199.99</price>
+    <stock>100</stock>
+  </item>
+</electronics>
+
