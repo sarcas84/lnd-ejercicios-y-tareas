@@ -1,0 +1,22 @@
+<store>
+    <category name="Electronics">
+        <product>
+            <name>Laptop</name>
+            <price>1000</price>
+        </product>
+        <product>
+            <name>Smartphone</name>
+            <price>700</price>
+        </product>
+    </category>
+    <category name="Books">
+        <product>
+            <name>1984</name>
+            <price>15.99</price>
+        </product>
+        <product>
+            <name>Brave New World</name>
+            <price>12.49</price>
+        </product>
+    </category>
+</store>
