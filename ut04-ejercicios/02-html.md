@@ -8,6 +8,7 @@ Berners-Lee trabajó en el CERN desde junio hasta diciembre de 1980. Durante ese
 ```
 
 A continuación, haz que tenga el siguiente formato:
+
 ![Berners-Lee](image.png)
 
 
