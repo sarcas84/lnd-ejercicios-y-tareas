@@ -11,14 +11,11 @@ A continuación, haz que tenga el siguiente formato:
 
 ![Berners-Lee](image-1.png)
 
-
 ```
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Biografía de Tim Berners-Lee">
     <title>Biografía de Tim Berners-Lee</title>
 </head>
 <body style="font-family: Times New Roman, sans-serif; margin: 20px;">

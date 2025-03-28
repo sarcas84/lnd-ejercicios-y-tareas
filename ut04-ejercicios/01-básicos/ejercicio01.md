@@ -5,7 +5,7 @@ A continuación se te presenta un documento web con algunos errores de sintaxis 
 
 Corrígelos.
 
-```html
+```
 <DOCTYPE html>
 <html>
     <head>
@@ -29,12 +29,11 @@ Corrígelos.
 
 Corregido:
 
-```html
+```
 <!DOCTYPE html>
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <meta name="description" content="Ejercicio HTML - Corrige los errores">
         <title>Corrige los errores que encuentres en el documento</title>
     </head>
     <body>
