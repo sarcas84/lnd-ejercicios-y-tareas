@@ -15,3 +15,11 @@
 - [01-xpath](./ut03-ejercicios/01-xpath/)
 - [02-xslt](./ut03-ejercicios/02-xslt/)
 - [03-xquery](./ut03-ejercicios/03-xquery/)
+
+## ut04-ejercicios
+- [01-básicos](./ut04-ejercicios/01-básicos/)
+- [02-listas](./ut04-ejercicios/02-listas/)
+- [03-enlaces](./ut04-ejercicios/03-enlaces/)
+- [04-tablas](./ut04-ejercicios/04-tablas/)
+- [05-media](./ut04-ejercicios/05-media/)
+- [06-formularios](./ut04-ejercicios/06-formularios/)

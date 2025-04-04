@@ -20,7 +20,8 @@ Crea un documento html mediante el cuál se visualize una tabla como la de la im
     }
     th, td {
       border: 1px solid #000;
-      background-color: #fff;      
+      background-color: #fff;
+      text-align: center;
     }
    
     td[rowspan] {

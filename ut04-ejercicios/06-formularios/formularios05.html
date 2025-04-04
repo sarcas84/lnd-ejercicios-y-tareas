@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario 05</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Completar</legend>
+            Elija un color: <input type="color" name="color"><br>
+            Nombre: <input type="text" name="nombre"><br>
+            Apellidos: <input type="text" name="apellidos"><br>
+            Teléfono: <input type="text" name="telefono"><br><br>
+            <input type="checkbox" name="asignatura" value="asignaturalengua"> Lengua
+            <input type="checkbox" name="asignatura" value="asignaturamatematicas"> Matemáticas
+            <input type="checkbox" name="asignatura" value="asignaturahistoria"> Historia
+            <input type="checkbox" name="asignatura" value="asignaturageografia"> Geografía<br>
+            Elija un fichero: <input type="file" name="archivo1"><br>
+            <textarea name="comentarios" rows="4" cols="57">Utilice este cuadro para escribir</textarea><br>
+            <input type="radio" name="formato" value="formatojpg"> JPG
+            <input type="radio" name="formato" value="formatopng"> PNG
+        </fieldset>
+        <fieldset>
+            <legend>Completar</legend>
+            Nombre: <input type="text" name="nombre"><br>
+            Apellidos: <input type="text" name="apellidos"><br>
+            Dirección: <input type="text" name="direccion"><br>
+            Elija una fecha: <input type="date" name="fecha"><br>
+            <select name="conector" multiple size="3">
+                <option value="usb">USB</option>
+                <option value="paralelo">Paralelo</option>
+                <option value="ps2">PS2</option>
+            </select><br>
+            Elija un fichero: <input type="file" name="archivo2">
+        </fieldset>
+    </form>
+</body>
+</html>
